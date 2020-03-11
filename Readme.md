@@ -1,4 +1,4 @@
-# TTGO LoRa Logger
+# TTGO T-Beam LoRa Logger
 
 A simple tool to log LoRa communication for further evaluation designed for the TTGO T-Beam.
 
