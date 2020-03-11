@@ -50,3 +50,13 @@ Press and hold the user button 3s during bootup. A message on the serial console
 
 The internals storage is limited to 4 MB, which is easily filed with messages, since a lot of metadata is transmitted. Therefore it is only useful for shorter experiments and should be formatted afterwards. 
 
+### `Time.h` include building error 
+
+Due to the non-central structure of embedded programming in C, a problem occurs while using the Time library. 
+The `Time.h` header is offered by the ESP-IDF as well as the library and thus leads to confusion. The error can be fixed by just moving the regarding Library away:
+
+```
+mv .pio/libdeps/esp32dev/Time_ID44/Time.h .pio/libdeps/esp32dev/Time_ID44/_Time.h
+```
+
+
